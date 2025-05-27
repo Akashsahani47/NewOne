@@ -65,39 +65,50 @@ function PrivacyPolicyPage() {
 
           <aside
   className={`
-    hidden md:block bg-sky-700 p-6 min-h-screen fixed top-0 left-0 w-72 h-full z-40
+    hidden md:block bg-sky-700 p-3 min-h-screen fixed top-0 left-0 w-72 h-full z-40
   `}
 >
-            <h2 className="text-white text-2xl font-bold mb-6 border-b border-sky-500 pb-3">Table of Contents</h2>
-            <nav>
-              <ul className="space-y-3">
-                {[
-                  { href: '#background', text: 'Background' },
-                  { href: '#definitions', text: 'Definitions' },
-                  { href: '#collection', text: 'Collection of Information' },
-                  { href: '#use', text: 'Use of Information' },
-                  { href: '#disclosure', text: 'Disclosure and Transfer' },
-                  { href: '#cookies', text: 'Cookies & Tracking' },
-                  { href: '#security', text: 'Data Security' },
-                  { href: '#retention', text: 'Data Retention' },
-                  { href: '#rights', text: 'Your Rights' },
-                  { href: '#changes', text: 'Changes to Privacy Policy' },
-                  { href: '#grievance', text: 'Grievance Officer' },
-                  { href: '#contact', text: 'Contact Us' }
-                ].map((item) => (
-                  <li key={item.href}>
-                    <a
-                      href={item.href}
-                      onClick={() => setIsMenuOpen(false)}
-                      className="block px-4 py-2 text-white hover:bg-sky-600 rounded-lg transition-all duration-200 font-medium text-lg"
-                    >
-                      {item.text}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          </aside>
+  <div className="flex flex-col gap-9 ">
+    <div className="flex justify-between border-b border-white">
+    <h2 className="text-white text-xl mb-0 ">Table of Contents</h2>
+  <img src="src/assets/meno.png" alt="" />
+  </div>
+  
+    <nav>
+      <ul className="space-y-3 ">
+        {[
+          { href: '#background', text: 'Background', icon: 'src/assets/img1.png' },
+          { href: '#definitions', text: 'Purpose and Applicability', icon: 'src/assets/img2.png' },
+          { href: '#collection', text: 'Definitions', icon: 'src/assets/img3.png' },
+          { href: '#use', text: 'Collection of Information', icon: 'src/assets/img4.png' },
+          { href: '#disclosure', text: 'Use of Information', icon: 'src/assets/img5.png' },
+          { href: '#cookies', text: 'Disclosure and Transfer of Information', icon: 'src/assets/img6.png' },
+          { href: '#security', text: ' Cookies, Web Beacons and Tracking Technologies', icon: 'src/assets/img7.png' }, 
+          { href: '#retention', text: 'Data Security', icon: 'src/assets/img8.png' },
+          { href: '#rights', text: 'Data Retention', icon: 'src/assets/img9.png' },
+          { href: '#changes', text: 'Consent', icon: 'src/assets/img10.png' },
+          { href: '#grievance', text: "Children's Privacy", icon: 'src/assets/img11.png' },
+          { href: '#contact', text: 'Contact Us', icon: 'src/assets/img12.png' }
+        ].map((item) => (
+          <li key={item.href}>
+            <a
+              href={item.href}
+              onClick={() => setIsMenuOpen(false)}
+              className="flex items-center gap-3  py-2 text-white hover:bg-sky-600 rounded-lg transition-all duration-200  "
+            >
+              <img
+                src={item.icon}
+                alt={`${item.text} icon`}
+                className="w-8 h-8"
+              />
+              <span>{item.text}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</aside>
 
           {/* <aside
   className={`
@@ -151,7 +162,7 @@ function PrivacyPolicyPage() {
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/e93d23eae3a0b70ccaef29ad6a5cc31bf2ac8207?placeholderIfAbsent=true"
                   alt="Privacy Policy Banner"
-                  className="object-contain self-stretch w-full aspect-[2.35] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] max-md:max-w-full"
+                  className="object-contain mt-8 w-[85%] mx-auto aspect-[2.5]  max-md:max-w-full"
                 />
 
                 <section id="background">
@@ -160,7 +171,7 @@ function PrivacyPolicyPage() {
                     imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/d2cb66f6ca71497536f0011ac7874c00a937fa46?placeholderIfAbsent=true"
                   />
 
-                  <p className="self-stretch mt-8 mr-7 ml-3 text-lg font-medium leading-7 text-zinc-600 max-md:mr-2.5 max-md:ml-2.5 max-md:text-base">
+                  <p className="mt-6 mx-auto w-[80%] text-base font-mediumleading-6text-zinc-600 max-md:w-full  max-md:mx-4 max-md:text-sm">
                     This Privacy Policy is formulated in compliance with Section
                     43A of the Information Technology Act, 2000 and the
                     Information Technology (Reasonable Security Practices and
@@ -171,7 +182,7 @@ function PrivacyPolicyPage() {
                     business operations.
                   </p>
 
-                  <p className="self-stretch mt-2 mr-9 ml-3 text-lg font-medium leading-7 text-zinc-600 max-md:mr-2.5 max-md:max-w-full">
+                  <p className="mt-6 mx-auto w-[80%] text-base font-mediumleading-6text-zinc-600 max-md:w-full  max-md:mx-4 max-md:text-sm">
                     The Company commits to ensure the lawful, fair, and
                     transparent processing of information received from or about
                     its users, customers, or partners
@@ -180,7 +191,7 @@ function PrivacyPolicyPage() {
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/267e8ffb0c73b2df22cb4075254957db24297784?placeholderIfAbsent=true"
                     alt="Divider"
-                    className="object-contain mt-11 max-w-full aspect-[2.7] w-[894px] max-md:mt-10"
+                    className="object-contain mt-11 ml-23 max- aspect-[2.7] w-[894px] max-md:mt-10"
                   />
                 </section>
 
@@ -190,7 +201,7 @@ function PrivacyPolicyPage() {
                     imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/9a4d41c72c638f44b1c2342b175ac39ce0df149f?placeholderIfAbsent=true"
                   />
 
-                  <section className="mt-10 ml-3 max-w-full w-[898px]">
+                  <section className="mt-10 ml-21 max-w-full w-[898px]">
                     <DefinitionItem
                       number="01"
                       title="Personal Information"
@@ -253,12 +264,12 @@ function PrivacyPolicyPage() {
                     imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/d54b9ffbde1c7d58a30df07e767e2d01e86936ec?placeholderIfAbsent=true"
                   />
 
-                  <p className="mt-8 text-lg font-medium leading-7 text-neutral-600 w-[916px] max-md:max-w-full">
+                  <p className="mt-8 ml-23 text-lg font-medium leading-7 text-neutral-600 w-[916px] max-md:max-w-full">
                     While you use our services or Site, AFPL may collect and process
                     various types of information, including sensitive data:
                   </p>
 
-                  <div className="mt-8 max-w-full w-[934px]">
+                  <div className="mt-8 ml-23 max-w-full w-[934px]">
                     <div className="flex gap-5 max-md:flex-col">
                       <InfoCard imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/fe1a64d911747ee11f9c11166d155ac93d51d739?placeholderIfAbsent=true" />
                       <InfoCard imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/922712b791cb554ea29daedab77d7ac6097aef5a?placeholderIfAbsent=true" />
@@ -267,7 +278,7 @@ function PrivacyPolicyPage() {
                     </div>
                   </div>
 
-                  <div className="mt-8 max-w-full w-[939px]">
+                  <div className="mt-8 ml-23 max-w-full w-[939px]">
                     <div className="flex gap-5 max-md:flex-col">
                       <InfoCard imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/68ee5aa373ca650be9f9cc8a21a67742583ff4ce?placeholderIfAbsent=true" />
                       <InfoCard imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/26bd535aa411afe209311dd500171076cbeeaded?placeholderIfAbsent=true" />
@@ -277,17 +288,17 @@ function PrivacyPolicyPage() {
                   </div>
                 </section>
 
-                <section id="use" className="max-md:px-2.5">
+                <section id="use" className=" max-md:px-2.5">
                   <PolicySection
                     title="USE OF INFORMATION"
                     imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/a1bbc437316a03da06cad4bbdeff8bfae7caf3ac?placeholderIfAbsent=true"
                   />
 
-                  <p className="self-start mt-7 ml-28 text-lg font-medium leading-none text-neutral-600 max-md:max-w-full">
+                  <p className="self-start ml-23 mt-7 ml-28 text-lg font-medium leading-none text-neutral-600 max-md:max-w-full">
                     The information collected by us is used in various ways to:
                   </p>
 
-                  <div className="flex flex-col items-center mt-8 max-w-full w-[922px]">
+                  <div className="flex flex-col ml-23 items-center mt-8 max-w-full w-[922px]">
                     <UseInfoItem
                       imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/cf64b803639298a11a8094511e02e4e46d8bae01?placeholderIfAbsent=true"
                       text="To facilitate assessment and provide credit underwriting support for sanction of credit facility."
@@ -364,7 +375,7 @@ function PrivacyPolicyPage() {
                   </div>
                 </section>
 
-                <section id="disclosure" className="max-md:px-2.5">
+                <section id="disclosure" className=" max-md:px-2.5">
                   <PolicySection
                     title="DISCLOSURE AND TRANSFER OF INFORMATION"
                     imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/d03ef235975167fcf295ef37ade19e6b2b138aae?placeholderIfAbsent=true"
@@ -377,23 +388,23 @@ function PrivacyPolicyPage() {
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/f650259048b8a20811cd884ee6859075a5d2f715?placeholderIfAbsent=true"
                     alt="Disclosure Information"
-                    className="object-contain mt-9 max-w-full rounded-none aspect-[1.11] w-[879px]"
+                    className="object-contain ml-23 mt-9 max-w-full rounded-none aspect-[1.11] w-[879px]"
                   />
 
-                  <div className="overflow-hidden px-3.5 py-2 mt-16 max-w-full text-lg font-medium leading-none bg-stone-50 text-neutral-600 w-[869px] max-md:pr-5 max-md:mt-10 max-md:max-w-full">
+                  <div className="overflow-hidden ml-23  px-3.5 py-2 mt-16 max-w-full text-lg font-medium leading-none bg-stone-50 text-neutral-600 w-[869px] max-md:pr-5 max-md:mt-10 max-md:max-w-full">
                     <span className="text-red-600">**</span> We do not sell or rent your
                     personal data to any third party.
                   </div>
                 </section>
 
-                <section id="cookies" className="max-md:px-2.5">
+                <section id="cookies" className=" max-md:px-2.5">
                   <PolicySection
                     title="COOKIES, WEB BEACONS AND TRACKING TECHNOLOGIES"
                     imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/d527b4de965766fb89512ce1cd52970732103cb1?placeholderIfAbsent=true"
                   />
 
-                  <div className="pl-9 mt-8 w-full max-md:pl-5 max-md:max-w-full">
-                    <p className="mr-14 text-lg font-medium leading-7 text-zinc-600 max-md:mr-2.5 max-md:max-w-full">
+                  <div className="  pl-9 mt-8 w-full max-md:pl-5 max-md:max-w-full">
+                    <p className=" ml-23 mr-14 text-lg font-medium leading-7 text-zinc-600 max-md:mr-2.5 max-md:max-w-full">
                       This Privacy Policy is formulated in compliance with Section
                       43A of the Information Technology Act, 2000 and the
                       Information Technology (Reasonable Security Practices and
@@ -407,7 +418,7 @@ function PrivacyPolicyPage() {
                     <div className="mt-6 max-md:max-w-full">
                       <div className="flex gap-5 max-md:flex-col">
                         <div className="w-[70%] max-md:ml-0 max-md:w-full">
-                          <p className="mr-0 text-lg font-medium leading-7 text-zinc-600 max-md:max-w-full">
+                          <p className=" ml-23 mr-0 text-lg font-medium leading-7 text-zinc-600 max-md:max-w-full">
                             The Company commits to ensure the lawful, fair, and
                             transparent processing of information received from or
                             about its users, customers, or partners
@@ -431,15 +442,15 @@ function PrivacyPolicyPage() {
                     imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/d88e3e4f1c6c0850cf33a8fbe57fd93b9490e9f2?placeholderIfAbsent=true"
                   />
 
-                  <p className="mt-5 ml-8 text-lg font-medium leading-none text-neutral-600 max-md:max-w-full">
+                  <p className=" ml-23 mt-5 ml-8 text-lg font-medium leading-none text-neutral-600 max-md:max-w-full">
                     Agrim implements a comprehensive security program to safeguard
                     information. Our measures include:
                   </p>
 
                   <DataSecuritySection />
 
-                  <div className="overflow-hidden px-5 py-2 mt-16 max-w-full text-lg font-medium leading-none bg-stone-50 text-neutral-600 w-[869px] max-md:pr-5 max-md:mt-10 max-md:max-w-full">
-                    <span className="text-red-600">**</span> In the event of a breach,
+                  <div className="ml-23  overflow-hidden px-5 py-2 mt-16 max-w-full text-lg font-medium leading-none bg-stone-50 text-neutral-600 w-[869px] max-md:pr-5 max-md:mt-10 max-md:max-w-full">
+                    <span className=" ml-23 text-red-600">**</span> In the event of a breach,
                     affected users will be notified as per applicable legal requiremts.
                   </div>
                 </section>
@@ -450,24 +461,24 @@ function PrivacyPolicyPage() {
                     imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/49d5529a2bd4dcda12ef1230e47b3bcabf8fc0ed?placeholderIfAbsent=true"
                   />
 
-                  <p className="self-start mt-5 ml-36 text-lg font-medium leading-none text-neutral-600 max-md:ml-2.5">
+                  <p className=" ml-23 self-start mt-5 ml-36 text-lg font-medium leading-none text-neutral-600 max-md:ml-2.5">
                     We retain personal information for as long as:
                   </p>
 
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/3c333af926475cea59534a0c815932a4e5bd6965?placeholderIfAbsent=true"
                     alt="Data Retention Information"
-                    className="object-contain mt-8 ml-3.5 max-w-full rounded-none aspect-[2.58] w-[869px]"
+                    className=" ml-23 object-contain mt-8 ml-3.5 max-w-full rounded-none aspect-[2.58] w-[869px]"
                   />
 
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/772a64c2d61afb25801d22c5353a0bb9199998fe?placeholderIfAbsent=true"
                     alt="Additional Information"
-                    className="object-contain mt-20 max-w-full rounded-none aspect-[1.23] w-[901px] max-md:mt-10"
+                    className=" ml-23 object-contain mt-20 max-w-full rounded-none aspect-[1.23] w-[901px] max-md:mt-10"
                   />
 
-                  <div className="flex overflow-hidden flex-wrap gap-4 px-3.5 pt-2.5 pb-5 mt-14 ml-8 max-w-full text-lg font-medium bg-stone-50 w-[898px] max-md:mt-10">
-                    <span className="self-start leading-none text-red-600">**</span>
+                  <div className=" ml-23 flex overflow-hidden flex-wrap gap-4 px-3.5 pt-2.5 pb-5 mt-14 ml-8 max-w-full text-lg font-medium bg-stone-50 w-[898px] max-md:mt-10">
+                    <span className=" self-start leading-none text-red-600">**</span>
                     <p className="flex-auto leading-7 text-neutral-600 w-[836px] max-md:max-w-full">
                       You may withdraw consent by contacting our Grievance Officer at
                       amit@agrimfincap.com. Withdrawal may result in limited or
@@ -476,7 +487,7 @@ function PrivacyPolicyPage() {
                   </div>
                 </section>
 
-                <section id="rights" className="max-md:px-2.5">
+                <section id="rights" className="ml-23 max-md:px-2.5">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/1674bf419d777a34567ce58d6d6f5c32aef5b994?placeholderIfAbsent=true"
                     alt="Policy Information 1"
@@ -496,7 +507,7 @@ function PrivacyPolicyPage() {
                   />
                 </section>
 
-                <section id="changes" className="max-md:px-2.5">
+                <section id="changes" className="ml-23 max-md:px-2.5">
                   <PolicySection
                     title="CHANGES TO PRIVACY POLICY"
                     imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/d527b4de965766fb89512ce1cd52970732103cb1?placeholderIfAbsent=true"
@@ -513,8 +524,8 @@ function PrivacyPolicyPage() {
                     className="object-contain mt-20 ml-7 max-w-full aspect-[5.03] w-[765px] max-md:mt-10"
                   />
 
-                  <div className="overflow-hidden px-16 py-2 mt-16 ml-3.5 max-w-full text-lg font-medium leading-none bg-stone-50 text-neutral-600 w-[869px] max-md:px-5 max-md:mt-10 max-md:max-w-full">
-                    <span className="text-red-600">** </span>Amendments shall be submitted
+                  <div className=" ml-23 overflow-hidden px-16 py-2 mt-16 ml-3.5 max-w-full text-lg font-medium leading-none bg-stone-50 text-neutral-600 w-[869px] max-md:px-5 max-md:mt-10 max-md:max-w-full">
+                    <span className="ml-23 text-red-600">** </span>Amendments shall be submitted
                     for Board approval and implemented prospectively
                   </div>
 
@@ -536,7 +547,7 @@ function PrivacyPolicyPage() {
 
                 {/* <img src="src/image1.png" alt="..." /> */}
 
-                <section id="grievance" className="max-md:px-2.5">
+                <section id="grievance" className="ml-23 max-md:px-2.5">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/febcced22eb3915cffdbcec67503a420fd67cce6?placeholderIfAbsent=true"
                     alt="Grievance Officer Contact Information"
@@ -555,24 +566,24 @@ function PrivacyPolicyPage() {
 function DataSecuritySection() {
   return (
     <>
-      <h3 className="mt-14 text-xl font-semibold leading-tight text-sky-700 max-md:mt-10">
+      <h3 className=" ml-23 mt-14 text-xl font-semibold leading-tight text-sky-700 max-md:mt-10">
         Encryption
       </h3>
-      <p className="ml-14 text-base font-medium leading-loose text-neutral-600">
+      <p className=" ml-23 ml-14 text-base font-medium leading-loose text-neutral-600">
         Secure encryption of data in transit and at rest.
       </p>
 
       <div className="z-10 self-start mt-1 w-full max-w-[1104px] max-md:max-w-full">
         {/* Desktop View */}
         <div className="flex gap-5 max-md:hidden">
-          <div className="w-[56%]">
+          <div className=" w-[56%]">
             <img
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/3f2611b35803e965a605ad8719de3e2211c7b0ea?placeholderIfAbsent=true"
               alt="Encryption Illustration"
-              className="object-contain grow w-full rounded-full aspect-[1.1]"
+              className=" object-contain grow w-full rounded-full aspect-[1.1]"
             />
           </div>
-          <div className="ml-5 w-[44%]">
+          <div className=" ml-23 ml-5 w-[44%]">
             <div className="flex flex-col grow items-start mt-16 text-xl font-semibold leading-tight text-sky-700">
               <h3>Access Management</h3>
               <p className="text-base font-medium leading-loose text-neutral-600">

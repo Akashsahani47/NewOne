@@ -1,11 +1,13 @@
 const Header = () => {
   return (
-    <header className="flex overflow-hidden flex-wrap gap-5 justify-between py-2.5 pr-16 pl-3.5 w-full bg-white shadow-[0px_-8px_62px_rgba(0,0,0,0.12)] max-md:pr-5 max-md:max-w-full">
-      <img
+    <header className="flex  overflow-hidden flex-wrap gap-5 justify-between py-2 pr-16 pl-3.5 w-full bg-[#f9f9f9] shadow-inner shadow-md  border-white-900 max-md:pr-5 max-md:max-w-full">
+      <div className="ml-[20vw]">
+      <img 
         src="https://cdn.builder.io/api/v1/image/assets/TEMP/9dda10e3c47d42fed5e2667db6af41806ef1e7b5?placeholderIfAbsent=true"
         alt="Agrim Fincap Logo"
-        className="object-contain shrink-0 max-w-full aspect-[3.44] w-[117px]"
+        className="object-contain  shrink-0 max-w-full aspect-[3.44] w-[117px]"
       />
+      </div>
       <div className="flex gap-8 self-start mt-3 max-md:max-w-full">
         <div className="flex flex-auto gap-2.5 items-center text-sm font-medium text-sky-800">
           <div className="flex gap-1.5 items-center self-stretch my-auto whitespace-nowrap">
