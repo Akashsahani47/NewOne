@@ -77,18 +77,18 @@ function PrivacyPolicyPage() {
     <nav>
       <ul className="space-y-3 ">
         {[
-          { href: '#background', text: 'Background', icon: 'src/assets/img1.png' },
-          { href: '#definitions', text: 'Purpose and Applicability', icon: 'src/assets/img2.png' },
-          { href: '#collection', text: 'Definitions', icon: 'src/assets/img3.png' },
-          { href: '#use', text: 'Collection of Information', icon: 'src/assets/img4.png' },
+          { href: '#background', text: 'Background', icon: './src/assets/img1.png' },
+          { href: '#definitions', text: 'Purpose and Applicability', icon: './src/assets/img2.png' },
+          { href: '#collection', text: 'Definitions', icon: './src/assets/img3.png' },
+          { href: '#use', text: 'Collection of Information', icon: './src/assets/img4.png' },
           { href: '#disclosure', text: 'Use of Information', icon: 'src/assets/img5.png' },
-          { href: '#cookies', text: 'Disclosure and Transfer of Information', icon: 'src/assets/img6.png' },
-          { href: '#security', text: ' Cookies, Web Beacons and Tracking Technologies', icon: 'src/assets/img7.png' }, 
-          { href: '#retention', text: 'Data Security', icon: 'src/assets/img8.png' },
-          { href: '#rights', text: 'Data Retention', icon: 'src/assets/img9.png' },
-          { href: '#changes', text: 'Consent', icon: 'src/assets/img10.png' },
-          { href: '#grievance', text: "Children's Privacy", icon: 'src/assets/img11.png' },
-          { href: '#contact', text: 'Contact Us', icon: 'src/assets/img12.png' }
+          { href: '#cookies', text: 'Disclosure and Transfer of Information', icon: './src/assets/img6.png' },
+          { href: '#security', text: ' Cookies, Web Beacons and Tracking Technologies', icon: './src/assets/img7.png' }, 
+          { href: '#retention', text: 'Data Security', icon: './src/assets/img8.png' },
+          { href: '#rights', text: 'Data Retention', icon: './src/assets/img9.png' },
+          { href: '#changes', text: 'Consent', icon: './src/assets/img10.png' },
+          { href: '#grievance', text: "Children's Privacy", icon: './src/assets/img11.png' },
+          { href: '#contact', text: 'Contact Us', icon: './src/assets/img12.png' }
         ].map((item) => (
           <li key={item.href}>
             <a
